@@ -143,6 +143,8 @@ console.log(peacock);
 ////////////////////////////////////////////////////////
 /// Lecture: loops
 
+/*
+
 // for (countter; iteration; incrementation) {}
 
 //for loop
@@ -158,5 +160,87 @@ while(i < names.length){
 	console.log(names[i]);
 	i++;
 }
+
+//break  = is to break out of loop or to finish at a point
+//continue = is to skip the rest of the loop and move on back to the top
+
+// this is an example of a break:
+
+for (var i = 1; i <= 5; i++) {
+	console.log(i);
+
+	if ( i === 3){
+		break;
+	}
+}
+
+// this is an example of a continue:
+
+for (var i = 1; i <= 5; i++) {
+
+	if ( i === 3){
+		//continue skips the rest of the funtion and 
+		//goes back up to the top, so here 3 won't be printed
+		continue;
+	}
+
+	console.log(i);
+}
+
+*/
+
+////////////////////////////////////////////////////////
+/// Challenge
+
+var georges = [1988, 1965, 1992, 2003, 1974];
+var withers = [1987, 1944, 2005, 2018, 1982];
+
+function printFullAge(years){
+	var ages = new Array();
+
+	for(var i = 0; i < years.length ; i++) {
+		var getAge = 2017 - years[i];
+		ages.push(getAge);
+		if (ages[i] >= 18) {
+			console.log("This person is of age, they are " + ages[i]);
+			ages[i] = true;
+		} else {
+			ages[i] = false;
+		}
+	}
+	return ages;
+}
+
+
+var full_1 = printFullAge(georges);
+var full_2 = printFullAge(withers);
+
+console.log(full_1);
+console.log(full_2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
