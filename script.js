@@ -192,8 +192,6 @@ for (var i = 1; i <= 5; i++) {
 ////////////////////////////////////////////////////////
 /// Challenge
 
-var georges = [1988, 1965, 1992, 2003, 1974];
-var withers = [1987, 1944, 2005, 2018, 1982];
 
 function printFullAge(years){
 	var ages = new Array();
@@ -201,6 +199,8 @@ function printFullAge(years){
 	for(var i = 0; i < years.length ; i++) {
 		var getAge = 2017 - years[i];
 		ages.push(getAge);
+
+		// ^ could also do ages[i] = 2017 - years[i];
 		if (ages[i] >= 18) {
 			console.log("This person is of age, they are " + ages[i]);
 			ages[i] = true;
@@ -211,6 +211,8 @@ function printFullAge(years){
 	return ages;
 }
 
+var georges = [1988, 1965, 1992, 2003, 1974];
+var withers = [1987, 1944, 2005, 2018, 1982];
 
 var full_1 = printFullAge(georges);
 var full_2 = printFullAge(withers);
